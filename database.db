@@ -30,4 +30,25 @@ CREATE TABLE Comments (
     FOREIGN KEY (AuthorID) REFERENCES Profile(id)
 );
 
+CREATE TABLE UserStory (
+    StoryID int NOT NULL,
+    AuthorID int,
+    Assignee int,
+    Title VARCHAR(100),
+    PRIMARY KEY (StoryID),
+    FOREIGN KEY (AuthorID) REFERENCES Profile(id),
+    FOREIGN KEY (Assignee) REFERENCES Profile(id)
+);
+
+CREATE TABLE Task (
+    TaskID int NOT NULL,
+    StoryID int,
+    Assignee int,
+    Title VARCHAR(100),
+    PRIMARY KEY (TaskID),
+    FOREIGN KEY (StoryID) REFERENCES UserStory(StoryID),
+    FOREIGN KEY (Assignee) REFERENCES Profile(id)
+);
+
+
 
