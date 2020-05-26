@@ -27,3 +27,4 @@ Workflow: Create <Task>
 Workflow: Change Status of the <UserStory>/<Task>
 	=> Changing status ENUM[New|Inprogress|Blocked|Completed]
 	=> Email sent to all the watchers <User>
+
