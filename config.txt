@@ -6,5 +6,9 @@
 	
 	"DbConnectionStr":"SHA Value",
 	"Environment": dev,
-	"isProd": false
+	"isProd": false,
+	"clientSide":{
+		"buildDestination":"/dist",
+		"module":"ES6"
+	}
 }
