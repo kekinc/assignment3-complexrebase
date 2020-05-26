@@ -1,0 +1,33 @@
+/**
+
+	MySQL database dump that will define basic schema for the Project Collaboration App.
+	Author: Kekin Chheda
+	Created Date: 26 May 2020
+*/
+
+CREATE TABLE Profile (
+	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	firstname VARCHAR(30) NOT NULL,
+	lastname VARCHAR(30) NOT NULL,
+	email VARCHAR(50),
+	reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+
+
+CREATE TABLE Projects (
+    ProjectID int NOT NULL,
+    Manager int,
+    Name VARCHAR(15),
+    PRIMARY KEY (ProjectID),
+    FOREIGN KEY (Manager) REFERENCES Profile(id)
+);
+
+CREATE TABLE Comments (
+    CommentID int NOT NULL,
+    AuthorID int,
+    CommentStr VARCHAR(100),
+    PRIMARY KEY (CommentID),
+    FOREIGN KEY (AuthorID) REFERENCES Profile(id)
+);
+
+

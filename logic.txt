@@ -1,0 +1,7 @@
+# This is logic.txt file contains Business logic of the app.
+# Author: Kekin Chheda
+# Created Date: 26 May 2020
+
+> 	<User> can not change scrum board if he/she is not Scrum master.
+>  	<User> can not change product <Backlog> if he/she is not Product owner.
+> 	Sprint board should contain stories from <Backlog>

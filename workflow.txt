@@ -2,5 +2,28 @@
 # Author: Kekin Chheda
 # Date: 26 May 2020.
 
+
 Workflow: <User> logs in
 		=> <User> enter credentials & logs in
+
+
+Workflow: Create <UserStory>
+	=> <User> creates userstory
+	=> Assigns to some <User>
+	=> Estimates Efforts ENUM[Hours|Days]
+	=> Allocates Pointers (Pointers must be according to Efforts)
+	=> Creates Subtasks <Task>
+	=> Email notification sent to assignee <User>
+
+
+Workflow: Create <Task>
+	=> <User> Splits <UserStory>/<Task> into {<Task>...}
+	=> Assigns to some <User>
+	=> Estimates Efforts ENUM[Hours|Days] (Total Hours/Days shoud not exceed UserStory Efforts.)
+	=> Creates Subtasks <Task>
+	=> Email notification sent to the assignee <User>
+
+
+Workflow: Change Status of the <UserStory>/<Task>
+	=> Changing status ENUM[New|Inprogress|Blocked|Completed]
+	=> Email sent to all the watchers <User>
