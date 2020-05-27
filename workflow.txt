@@ -2,3 +2,5 @@
 # Author: Kekin Chheda
 # Date: 26 May 2020.
 
+Workflow: <User> logs in
+		=> <User> enter credentials & logs in
